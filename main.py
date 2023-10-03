@@ -31,10 +31,14 @@ def assigned_value():
     }
     return m_data
 
+#variavel repetida
 @app.route("/movies")
 def get_movies():
-    movies_data = assigned_value()
-    return jsonify({"data":movies_data,"status":"Sucesso"})
+    movie_data = assigned_value()
+    return jsonify({
+        "data":movie_data,
+        "status":"Sucesso"
+    })
 
 
 
